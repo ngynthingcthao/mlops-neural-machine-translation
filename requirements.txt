@@ -1,0 +1,9 @@
+torch
+transformers
+datasets
+sacrebleu
+mlflow
+dvc
+bentoml
+qdrant-client
+sentence-transformers
