@@ -1,0 +1,142 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocessing/preprocess_and_split.py
+    deps:
+    - path: data/raw/en_sents.txt
+      hash: md5
+      md5: c73fc436dadb429567def2ce5701fc5f
+      size: 8792191
+    - path: data/raw/vi_sents.txt
+      hash: md5
+      md5: 8c99ab85f23d18d98c0eedceba74570c
+      size: 12073947
+    - path: src/preprocessing/preprocess_and_split.py
+      hash: md5
+      md5: 1b65cf1df8c9ffa3e8e7f02cc3f4d7e9
+      size: 1591
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: b4a32f1a804e10f585241f96b12dcf5b.dir
+      size: 31031249
+      nfiles: 3
+  preprocess_text:
+    cmd: python src/preprocessing/preprocess_and_split.py
+    deps:
+    - path: data/raw/en_sents.txt
+      hash: md5
+      md5: c73fc436dadb429567def2ce5701fc5f
+      size: 8792191
+    - path: data/raw/vi_sents.txt
+      hash: md5
+      md5: 8c99ab85f23d18d98c0eedceba74570c
+      size: 12073947
+    - path: src/preprocessing/preprocess_and_split.py
+      hash: md5
+      md5: 4f45f6ce99a3a6b1b6fb85a383f26f76
+      size: 1757
+    outs:
+    - path: data/processed/test.json
+      hash: md5
+      md5: 8ea572e458d22e384a4efa572b03f065
+      size: 1559745
+    - path: data/processed/train.json
+      hash: md5
+      md5: 8791496c73c5c5fde7cd151933bc6754
+      size: 27919598
+    - path: data/processed/val.json
+      hash: md5
+      md5: 5f803ab1519e1bdaaf71e66c8cecb15c
+      size: 1551906
+  preprocess_transformer:
+    cmd: python src/preprocessing/preprocess_transformer.py
+    deps:
+    - path: data/processed/test.json
+      hash: md5
+      md5: 8ea572e458d22e384a4efa572b03f065
+      size: 1559745
+    - path: data/processed/train.json
+      hash: md5
+      md5: 8791496c73c5c5fde7cd151933bc6754
+      size: 27919598
+    - path: data/processed/val.json
+      hash: md5
+      md5: 5f803ab1519e1bdaaf71e66c8cecb15c
+      size: 1551906
+    - path: src/preprocessing/preprocess_transformer.py
+      hash: md5
+      md5: dea7a64bdfbbba9f552cff880b7a0fc6
+      size: 2336
+    outs:
+    - path: artifacts/vocab/
+      hash: md5
+      md5: 11f0db0c43b210ef03820d7f0e3543aa.dir
+      size: 1011152
+      nfiles: 2
+    - path: data/processed/test_transformer.json
+      hash: md5
+      md5: 615e9612b652d536de6e1baec947ae22
+      size: 13827823
+    - path: data/processed/train_transformer.json
+      hash: md5
+      md5: 663d9c8f788399569f881b30028c617e
+      size: 248912033
+    - path: data/processed/val_transformer.json
+      hash: md5
+      md5: d3d6a977425599bc66b63a56d411058d
+      size: 13825338
+  train:
+    cmd: python src/main.py
+    deps:
+    - path: artifacts/vocab/
+      hash: md5
+      md5: 11f0db0c43b210ef03820d7f0e3543aa.dir
+      size: 1011152
+      nfiles: 2
+    - path: data/processed/test.json
+      hash: md5
+      md5: 8ea572e458d22e384a4efa572b03f065
+      size: 1559745
+    - path: data/processed/test_transformer.json
+      hash: md5
+      md5: 615e9612b652d536de6e1baec947ae22
+      size: 13827823
+    - path: data/processed/train.json
+      hash: md5
+      md5: 8791496c73c5c5fde7cd151933bc6754
+      size: 27919598
+    - path: data/processed/train_transformer.json
+      hash: md5
+      md5: 663d9c8f788399569f881b30028c617e
+      size: 248912033
+    - path: data/processed/val.json
+      hash: md5
+      md5: 5f803ab1519e1bdaaf71e66c8cecb15c
+      size: 1551906
+    - path: data/processed/val_transformer.json
+      hash: md5
+      md5: d3d6a977425599bc66b63a56d411058d
+      size: 13825338
+    - path: src/main.py
+      hash: md5
+      md5: 54752dca75eb7240cefdf407353c0663
+      size: 2389
+    - path: src/model/transformer.py
+      hash: md5
+      md5: 1f5d5ea5c987c978f8657da7cc2e7de5
+      size: 1923
+    - path: src/training/run_opus.py
+      hash: md5
+      md5: 39ae1fc22341dfa5b09d882b6c79c49d
+      size: 5963
+    - path: src/training/run_transformer.py
+      hash: md5
+      md5: aed5746a35cd27b82eade303d1aa5b26
+      size: 6813
+    outs:
+    - path: artifacts/models/
+      hash: md5
+      md5: 420b633140686720280afe08bbe43eee.dir
+      size: 659236871
+      nfiles: 17

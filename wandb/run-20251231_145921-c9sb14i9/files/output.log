@@ -1,0 +1,8 @@
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25000/25000 [1:05:57<00:00,  6.32it/s]
+{'loss': 0.1955, 'grad_norm': 0.7873525023460388, 'learning_rate': 2.0000000000000002e-07, 'epoch': 1.0}
+{'train_runtime': 3957.8774, 'train_samples_per_second': 50.532, 'train_steps_per_second': 6.317, 'train_loss': 0.19548787109375, 'epoch': 1.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 250/250 [00:15<00:00, 16.49it/s]
+>>> STARTING CPU GENERATION FOR BLEU <<<
+Generating (CPU): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [16:52<00:00,  1.97it/s]
+>>> BLEU = 44.98 <<<

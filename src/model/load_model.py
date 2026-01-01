@@ -1,13 +1,8 @@
-import os
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-BASE_DIR = os.path.abspath(
-    os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-)
-
-MODEL_DIR = os.path.join(BASE_DIR, "artifacts", "config2_run1")
+MODEL_NAME = "Helsinki-NLP/opus-mt-en-vi"
 
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
-    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_DIR)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
     return tokenizer, model

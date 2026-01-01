@@ -1,0 +1,14 @@
+C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py:98: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 37500/37500 [1:42:44<00:00,  6.08it/s]
+{'loss': 0.0949, 'grad_norm': 0.8093735575675964, 'learning_rate': 0.00013336533333333333, 'epoch': 1.0}
+{'loss': 0.0571, 'grad_norm': 0.34709304571151733, 'learning_rate': 6.671466666666667e-05, 'epoch': 2.0}
+{'loss': 0.0316, 'grad_norm': 0.3542899787425995, 'learning_rate': 6.4e-08, 'epoch': 3.0}
+{'train_runtime': 6164.6588, 'train_samples_per_second': 97.329, 'train_steps_per_second': 6.083, 'train_loss': 0.06120295572916667, 'epoch': 3.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 250/250 [00:16<00:00, 14.91it/s]
+>>> STARTING CPU GENERATION FOR BLEU <<<
+Generating (CPU): 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [31:17<00:00,  1.07it/s]
+>>> BLEU = 94.57 <<<
+C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\modeling_utils.py:3918: UserWarning: Moving the following attributes in the config to the generation config: {'max_length': 512, 'num_beams': 4, 'bad_words_ids': [[53684]]}. You are seeing this warning because you've set generation parameters in the model config, as opposed to in the generation config.
+  warnings.warn(

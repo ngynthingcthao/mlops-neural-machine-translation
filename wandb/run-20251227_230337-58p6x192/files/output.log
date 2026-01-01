@@ -1,0 +1,44 @@
+Epoch 1:   0%|                                                                                                                               | 0/1 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 118, in run_transformer_config
+    logits = model(src, tgt_in)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\model\transformer.py", line 34, in forward
+    src_emb = self.pos_encoder(self.src_tok_emb(src))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\model\transformer.py", line 16, in forward
+    return x + self.pe[:, :x.size(1)].to(x.device)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 118, in run_transformer_config
+    logits = model(src, tgt_in)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\model\transformer.py", line 34, in forward
+    src_emb = self.pos_encoder(self.src_tok_emb(src))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\model\transformer.py", line 16, in forward
+    return x + self.pe[:, :x.size(1)].to(x.device)
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

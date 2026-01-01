@@ -1,0 +1,121 @@
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 42879/42879 [1:07:50<00:00, 10.53it/s]
+{'loss': 0.0941, 'grad_norm': 2.2416176795959473, 'learning_rate': 0.0001333659833484923, 'epoch': 1.0}
+{'loss': 0.0573, 'grad_norm': 1.4376044273376465, 'learning_rate': 6.6717973833345e-05, 'epoch': 2.0}
+{'loss': 0.0323, 'grad_norm': 0.5742055773735046, 'learning_rate': 7.462860607756711e-08, 'epoch': 3.0}
+{'train_runtime': 4070.4193, 'train_samples_per_second': 168.539, 'train_steps_per_second': 10.534, 'train_loss': 0.061227894765694235, 'epoch': 3.0}
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1588/1588 [00:40<00:00, 39.52it/s]
+>>> STARTING CPU GENERATION FOR BLEU <<<
+Generating (CPU):  61%|███████████████████████████████████████████████████████████▏                                     | 7760/12705 [1:02:16<39:41,  2.08it/s]
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 131, in run_opus_config
+    gen_ids = model_cpu.generate(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\generation\utils.py", line 2564, in generate
+    result = decoding_method(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\generation\utils.py", line 3265, in _beam_search
+    model_outputs = self(**model_inputs, return_dict=True)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\amp\autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1522, in forward
+    outputs = self.model(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1278, in forward
+    decoder_outputs = self.decoder(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1069, in forward
+    layer_outputs = decoder_layer(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 435, in forward
+    hidden_states, cross_attn_weights = self.encoder_attn(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 256, in forward
+    attn_output, attn_weights = attention_interface(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\integrations\sdpa_attention.py", line 96, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 131, in run_opus_config
+    gen_ids = model_cpu.generate(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\generation\utils.py", line 2564, in generate
+    result = decoding_method(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\generation\utils.py", line 3265, in _beam_search
+    model_outputs = self(**model_inputs, return_dict=True)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\amp\autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1522, in forward
+    outputs = self.model(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1278, in forward
+    decoder_outputs = self.decoder(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 1069, in forward
+    layer_outputs = decoder_layer(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 435, in forward
+    hidden_states, cross_attn_weights = self.encoder_attn(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\models\marian\modeling_marian.py", line 256, in forward
+    attn_output, attn_weights = attention_interface(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\integrations\sdpa_attention.py", line 96, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+KeyboardInterrupt

@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.9.25",
+  "startedAt":  "2025-12-30T07:03:20.511061Z",
+  "program":  "C:\\Users\\Hello\\mlops-neural-machine-translation\\src\\main.py",
+  "codePath":  "src\\main.py",
+  "codePathLocal":  "src\\main.py",
+  "git":  {
+    "remote":  "https://github.com/ngynthingcthao/mlops-neural-machine-translation.git",
+    "commit":  "0ea5760a08443468bad768a1245425d007acf370"
+  },
+  "email":  "ngynthingcthao@gmail.com",
+  "root":  "C:\\Users\\Hello\\mlops-neural-machine-translation",
+  "host":  "LAPTOP-5KQT0H41",
+  "executable":  "C:\\Users\\Hello\\anaconda3\\envs\\trans\\python.exe",
+  "cpu_count":  12,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "358983135232",
+      "used":  "289171812352"
+    }
+  },
+  "memory":  {
+    "total":  "16890978304"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "memoryTotal":  "6442450944",
+      "cudaCores":  3840,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-00bc86d7-c6e6-8adb-044e-85d4b5c40afb"
+    }
+  ],
+  "cudaVersion":  "12.3",
+  "writerId":  "0jp5ap5jaax2w2q7mvb9t0c8tdxfmbf3"
+}

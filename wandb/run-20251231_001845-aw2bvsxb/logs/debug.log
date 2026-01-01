@@ -1,0 +1,211 @@
+2025-12-31 00:18:45,154 INFO    MainThread:15828 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\Hello\mlops-neural-machine-translation\wandb\run-20251231_001845-aw2bvsxb\logs\debug.log
+2025-12-31 00:18:45,154 INFO    MainThread:15828 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\Hello\mlops-neural-machine-translation\wandb\run-20251231_001845-aw2bvsxb\logs\debug-internal.log
+2025-12-31 00:18:45,154 INFO    MainThread:15828 [wandb_init.py:init():841] calling init triggers
+2025-12-31 00:18:45,155 INFO    MainThread:15828 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'model_type': 'transformer', 'lr': 5e-05, 'batch_size': 16, 'epochs': 8, 'd_model': 512, 'nhead': 8, 'num_layers': 4, 'src_vocab_size': 32000, 'tgt_vocab_size': 32000, '_wandb': {}}
+2025-12-31 00:18:45,155 INFO    MainThread:15828 [wandb_init.py:init():889] starting backend
+2025-12-31 00:18:45,156 INFO    MainThread:15828 [wandb_init.py:init():892] sending inform_init request
+2025-12-31 00:18:45,161 INFO    MainThread:15828 [wandb_init.py:init():900] backend started and connected
+2025-12-31 00:18:45,164 INFO    MainThread:15828 [wandb_init.py:init():970] updated telemetry
+2025-12-31 00:18:45,241 INFO    MainThread:15828 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2025-12-31 00:18:46,034 INFO    MainThread:15828 [wandb_init.py:init():1041] starting run threads in backend
+2025-12-31 00:18:46,564 INFO    MainThread:15828 [wandb_run.py:_console_start():2521] atexit reg
+2025-12-31 00:18:46,564 INFO    MainThread:15828 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2025-12-31 00:18:46,564 INFO    MainThread:15828 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2025-12-31 00:18:46,564 INFO    MainThread:15828 [wandb_run.py:_redirect():2461] Redirects installed.
+2025-12-31 00:18:46,566 INFO    MainThread:15828 [wandb_init.py:init():1081] run started, returning control to user process
+2025-12-31 00:52:34,599 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,676 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,676 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,677 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,677 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,678 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,679 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,681 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,682 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,682 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,683 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,683 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,683 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,693 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-31 00:52:34,698 ERROR   wandb-AsyncioManager-main:15828 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

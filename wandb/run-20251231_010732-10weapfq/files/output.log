@@ -1,0 +1,11 @@
+
+===== OPUS | EPOCH 1/1 =====
+C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py:111: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28585/28585 [1:23:42<00:00,  5.69it/s]
+{'train_runtime': 5022.1985, 'train_samples_per_second': 45.533, 'train_steps_per_second': 5.692, 'train_loss': 0.2303449416214798, 'epoch': 1.0}
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1588/1588 [02:01<00:00, 13.11it/s]
+BLEU (Opus CPU): 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 12705/12705 [3:41:34<00:00,  1.05s/it]
+C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\modeling_utils.py:3918: UserWarning: Moving the following attributes in the config to the generation config: {'max_length': 512, 'num_beams': 4, 'bad_words_ids': [[53684]]}. You are seeing this warning because you've set generation parameters in the model config, as opposed to in the generation config.
+  warnings.warn(

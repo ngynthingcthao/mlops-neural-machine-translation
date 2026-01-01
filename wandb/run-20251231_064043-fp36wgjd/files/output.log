@@ -1,0 +1,43 @@
+C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py:98: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+  5%|█████▋                                                                                                               | 1393/28585 [01:50<37:20, 12.14it/s]Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 107, in run_opus_config
+    train_output = trainer.train()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 2618, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 5654, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\data_loader.py", line 577, in __iter__
+    current_batch = send_to_device(current_batch, self.device, non_blocking=self._non_blocking)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 153, in send_to_device
+    return tensor.to(device, non_blocking=non_blocking)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\tokenization_utils_base.py", line 838, in to
+    self.data = {
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\tokenization_utils_base.py", line 839, in <dictcomp>
+    k: v.to(device=device, non_blocking=non_blocking) if hasattr(v, "to") and callable(v.to) else v
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 107, in run_opus_config
+    train_output = trainer.train()
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 2618, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\trainer.py", line 5654, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\data_loader.py", line 577, in __iter__
+    current_batch = send_to_device(current_batch, self.device, non_blocking=self._non_blocking)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\accelerate\utils\operations.py", line 153, in send_to_device
+    return tensor.to(device, non_blocking=non_blocking)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\tokenization_utils_base.py", line 838, in to
+    self.data = {
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\transformers\tokenization_utils_base.py", line 839, in <dictcomp>
+    k: v.to(device=device, non_blocking=non_blocking) if hasattr(v, "to") and callable(v.to) else v
+KeyboardInterrupt

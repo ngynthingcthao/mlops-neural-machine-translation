@@ -1,0 +1,15 @@
+Epoch 1: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 14293/14293 [12:06<00:00, 19.67it/s]
+Epoch 2: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 14293/14293 [18:53<00:00, 12.61it/s]
+Epoch 3:  12%|█████████████                                                                                               | 1730/14293 [02:20<16:57, 12.35it/s]
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 168, in run_transformer_config
+    next_token = out[:, -1].argmax(-1).unsqueeze(1)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 168, in run_transformer_config
+    next_token = out[:, -1].argmax(-1).unsqueeze(1)
+KeyboardInterrupt

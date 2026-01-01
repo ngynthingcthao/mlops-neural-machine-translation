@@ -1,0 +1,21 @@
+2025-12-30 20:27:20,371 INFO    MainThread:15828 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\Hello\mlops-neural-machine-translation\wandb\run-20251230_202720-oe1v1tip\logs\debug.log
+2025-12-30 20:27:20,372 INFO    MainThread:15828 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\Hello\mlops-neural-machine-translation\wandb\run-20251230_202720-oe1v1tip\logs\debug-internal.log
+2025-12-30 20:27:20,373 INFO    MainThread:15828 [wandb_init.py:init():841] calling init triggers
+2025-12-30 20:27:20,373 INFO    MainThread:15828 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'model_type': 'opus', 'lr': 0.0002, 'batch_size': 16, 'epochs': 3, 'seed': 42, 'model': 'Helsinki-NLP/opus-mt-en-vi', '_wandb': {}}
+2025-12-30 20:27:20,373 INFO    MainThread:15828 [wandb_init.py:init():889] starting backend
+2025-12-30 20:27:20,373 INFO    MainThread:15828 [wandb_init.py:init():892] sending inform_init request
+2025-12-30 20:27:20,389 INFO    MainThread:15828 [wandb_init.py:init():900] backend started and connected
+2025-12-30 20:27:20,394 INFO    MainThread:15828 [wandb_init.py:init():970] updated telemetry
+2025-12-30 20:27:20,598 INFO    MainThread:15828 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2025-12-30 20:27:21,798 INFO    MainThread:15828 [wandb_init.py:init():1041] starting run threads in backend
+2025-12-30 20:27:23,521 INFO    MainThread:15828 [wandb_run.py:_console_start():2521] atexit reg
+2025-12-30 20:27:23,521 INFO    MainThread:15828 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2025-12-30 20:27:23,521 INFO    MainThread:15828 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2025-12-30 20:27:23,522 INFO    MainThread:15828 [wandb_run.py:_redirect():2461] Redirects installed.
+2025-12-30 20:27:23,528 INFO    MainThread:15828 [wandb_init.py:init():1081] run started, returning control to user process
+2025-12-30 23:44:18,667 INFO    MainThread:15828 [wandb_run.py:_finish():2287] finishing run ngynthingcthao-tr-ng-i-h-c-qu-c-t-s-i-g-n-siu/MLOps-NMT-EN-VI/oe1v1tip
+2025-12-30 23:44:18,670 INFO    MainThread:15828 [wandb_run.py:_atexit_cleanup():2486] got exitcode: 0
+2025-12-30 23:44:18,672 INFO    MainThread:15828 [wandb_run.py:_restore():2468] restore
+2025-12-30 23:44:18,673 INFO    MainThread:15828 [wandb_run.py:_restore():2474] restore done
+2025-12-30 23:44:20,922 INFO    MainThread:15828 [wandb_run.py:_footer_sync_info():3862] logging synced files

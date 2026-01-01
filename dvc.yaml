@@ -1,0 +1,41 @@
+stages:
+  preprocess_text:
+    cmd: python src/preprocessing/preprocess_and_split.py
+    deps:
+      - src/preprocessing/preprocess_and_split.py
+      - data/raw/en_sents.txt
+      - data/raw/vi_sents.txt
+    outs:
+      - data/processed/train.json
+      - data/processed/val.json
+      - data/processed/test.json
+
+  preprocess_transformer:
+    cmd: python src/preprocessing/preprocess_transformer.py
+    deps:
+      - src/preprocessing/preprocess_transformer.py
+      - data/processed/train.json
+      - data/processed/val.json
+      - data/processed/test.json
+    outs:
+      - artifacts/vocab/
+      - data/processed/train_transformer.json
+      - data/processed/val_transformer.json
+      - data/processed/test_transformer.json
+
+  train:
+    cmd: python src/main.py
+    deps:
+      - src/main.py
+      - src/training/run_opus.py
+      - src/training/run_transformer.py
+      - src/model/transformer.py
+      - data/processed/train.json
+      - data/processed/val.json
+      - data/processed/test.json
+      - data/processed/train_transformer.json
+      - data/processed/val_transformer.json
+      - data/processed/test_transformer.json
+      - artifacts/vocab/
+    outs:
+      - artifacts/models/

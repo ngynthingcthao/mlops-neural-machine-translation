@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NMT EN → VI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      min-height: 100vh;
+    }
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.1);
+    }
+    textarea { resize: none; }
+    .output-box {
+      background: #f1fdf6;
+      border-left: 6px solid #198754;
+      padding: 16px;
+      border-radius: 10px;
+      min-height: 60px;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Neural Machine Translation</h1>
+    <p class="text-muted">English → Vietnamese | Opus vs Transformer</p>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card p-4">
+
+        <div class="mb-3">
+          <label class="fw-semibold">Input English sentence</label>
+          <textarea id="inputText" class="form-control mt-1" rows="3"
+            placeholder="Example: I have a dog"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="fw-semibold">Choose model</label>
+          <select id="modelType" class="form-select mt-1">
+            <option value="opus">Opus-MT (Pretrained)</option>
+            <option value="transformer">Transformer (From Scratch)</option>
+          </select>
+        </div>
+
+        <div class="d-grid mb-4">
+          <button id="translateBtn" class="btn btn-primary btn-lg">
+            🚀 Translate
+          </button>
+        </div>
+
+        <!-- OUTPUT LUÔN HIỆN -->
+        <div>
+          <h5 class="fw-bold">Translation Result</h5>
+          <div id="modelUsed" class="text-muted mb-2"></div>
+          <div id="outputText" class="output-box">
+            👉 Result will appear here
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-muted mt-5">
+    Built with FastAPI · PyTorch · DVC · MLflow · W&B
+  </div>
+</div>
+
+<!-- 🚀 SCRIPT ĐÚNG CHUẨN -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("translateBtn");
+
+  btn.addEventListener("click", async () => {
+    console.log("Translate clicked");
+
+    const text = document.getElementById("inputText").value.trim();
+    const modelType = document.getElementById("modelType").value;
+    const output = document.getElementById("outputText");
+    const modelUsed = document.getElementById("modelUsed");
+
+    if (!text) {
+      output.innerText = "⚠️ Please enter an English sentence.";
+      return;
+    }
+
+    output.innerText = "⏳ Translating...";
+    modelUsed.innerText = "";
+
+    try {
+      const res = await fetch("/translate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: text,
+          model_type: modelType
+        })
+      });
+
+      const data = await res.json();
+      console.log("API response:", data);
+
+      output.innerText = data.translation;
+      modelUsed.innerText = "Model used: " + data.model_used;
+    } catch (err) {
+      output.innerText = "❌ Cannot connect to backend.";
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 316, in log_param
+    self.store.log_param(run_id, param)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 916, in log_param
+    self._log_run_param(run_info, param)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 922, in _log_run_param
+    self._validate_new_param_value(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 942, in _validate_new_param_value
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Changing param values is not allowed. Param with key='model_type' was already logged with value='transformer' for run ID='0a8868357c7044d3aa8e842c7d7ad573'. Attempted logging new value 'transformer_scratch'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 94, in run_transformer_config
+    mlflow.log_param("model_type", "transformer_scratch")
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\fluent.py", line 545, in log_param
+    return MlflowClient().log_param(run_id, key, value)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\client.py", line 876, in log_param
+    self._tracking_client.log_param(run_id, key, value)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 320, in log_param
+    raise MlflowException(msg, INVALID_PARAMETER_VALUE)
+mlflow.exceptions.MlflowException: Changing param values is not allowed. Param with key='model_type' was already logged with value='transformer' for run ID='0a8868357c7044d3aa8e842c7d7ad573'. Attempted logging new value 'transformer_scratch'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.'
+Traceback (most recent call last):
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 316, in log_param
+    self.store.log_param(run_id, param)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 916, in log_param
+    self._log_run_param(run_info, param)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 922, in _log_run_param
+    self._validate_new_param_value(
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\store\tracking\file_store.py", line 942, in _validate_new_param_value
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Changing param values is not allowed. Param with key='model_type' was already logged with value='transformer' for run ID='0a8868357c7044d3aa8e842c7d7ad573'. Attempted logging new value 'transformer_scratch'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 94, in run_transformer_config
+    mlflow.log_param("model_type", "transformer_scratch")
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\fluent.py", line 545, in log_param
+    return MlflowClient().log_param(run_id, key, value)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\client.py", line 876, in log_param
+    self._tracking_client.log_param(run_id, key, value)
+  File "C:\Users\Hello\anaconda3\envs\trans\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 320, in log_param
+    raise MlflowException(msg, INVALID_PARAMETER_VALUE)
+mlflow.exceptions.MlflowException: Changing param values is not allowed. Param with key='model_type' was already logged with value='transformer' for run ID='0a8868357c7044d3aa8e842c7d7ad573'. Attempted logging new value 'transformer_scratch'.
+
+The cause of this error is typically due to repeated calls
+to an individual run_id event logging.
+
+Incorrect Example:
+---------------------------------------
+with mlflow.start_run():
+    mlflow.log_param("depth", 3)
+    mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will throw an MlflowException for overwriting a
+logged parameter.
+
+Correct Example:
+---------------------------------------
+with mlflow.start_run():
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 3)
+    with mlflow.start_run(nested=True):
+        mlflow.log_param("depth", 5)
+---------------------------------------
+
+Which will create a new nested run for each individual
+model and prevent parameter key collisions within the
+tracking store.'

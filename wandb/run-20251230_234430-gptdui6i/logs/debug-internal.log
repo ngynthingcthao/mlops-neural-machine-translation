@@ -1,0 +1,12 @@
+{"time":"2025-12-30T23:44:30.4461422+07:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2025-12-30T23:44:31.4313251+07:00","level":"INFO","msg":"stream: created new stream","id":"gptdui6i"}
+{"time":"2025-12-30T23:44:31.4319384+07:00","level":"INFO","msg":"handler: started","stream_id":"gptdui6i"}
+{"time":"2025-12-30T23:44:31.4477827+07:00","level":"INFO","msg":"stream: started","id":"gptdui6i"}
+{"time":"2025-12-30T23:44:31.4477827+07:00","level":"INFO","msg":"writer: started","stream_id":"gptdui6i"}
+{"time":"2025-12-30T23:44:31.4477827+07:00","level":"INFO","msg":"sender: started","stream_id":"gptdui6i"}
+{"time":"2025-12-31T00:18:36.0607045+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-31T00:18:36.4545566+07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-31T00:18:36.4725362+07:00","level":"INFO","msg":"stream: closing","id":"gptdui6i"}
+{"time":"2025-12-31T00:18:36.4725362+07:00","level":"INFO","msg":"handler: closed","stream_id":"gptdui6i"}
+{"time":"2025-12-31T00:18:36.4736982+07:00","level":"INFO","msg":"sender: closed","stream_id":"gptdui6i"}
+{"time":"2025-12-31T00:18:36.4736982+07:00","level":"INFO","msg":"stream: closed","id":"gptdui6i"}

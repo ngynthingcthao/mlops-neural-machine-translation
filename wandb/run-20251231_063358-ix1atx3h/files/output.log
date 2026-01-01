@@ -1,0 +1,13 @@
+Epoch 1:   6%|██████▋                                                                                                       | 438/7147 [00:16<04:11, 26.70it/s]
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 148, in run_transformer_config
+    total_loss += loss.item()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 68, in <module>
+    bleu, train_loss, val_loss = run_transformer_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_transformer.py", line 148, in run_transformer_config
+    total_loss += loss.item()
+KeyboardInterrupt

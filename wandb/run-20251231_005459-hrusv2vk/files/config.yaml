@@ -1,0 +1,83 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            2rxq8coge9rdqq93mec6ejjpab68rvcx:
+                codePath: src\main.py
+                codePathLocal: src\main.py
+                cpu_count: 12
+                cpu_count_logical: 16
+                cudaVersion: "12.3"
+                disk:
+                    /:
+                        total: "358983135232"
+                        used: "291579744256"
+                email: ngynthingcthao@gmail.com
+                executable: C:\Users\Hello\anaconda3\envs\trans\python.exe
+                git:
+                    commit: 0ea5760a08443468bad768a1245425d007acf370
+                    remote: https://github.com/ngynthingcthao/mlops-neural-machine-translation.git
+                gpu: NVIDIA GeForce RTX 3060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3840
+                      memoryTotal: "6442450944"
+                      name: NVIDIA GeForce RTX 3060 Laptop GPU
+                      uuid: GPU-00bc86d7-c6e6-8adb-044e-85d4b5c40afb
+                host: LAPTOP-5KQT0H41
+                memory:
+                    total: "16890978304"
+                os: Windows-10-10.0.26100-SP0
+                program: C:\Users\Hello\mlops-neural-machine-translation\src\main.py
+                python: CPython 3.9.25
+                root: C:\Users\Hello\mlops-neural-machine-translation
+                startedAt: "2025-12-30T17:54:59.341762Z"
+                writerId: 2rxq8coge9rdqq93mec6ejjpab68rvcx
+        m: []
+        python_version: 3.9.25
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 105
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 105
+            "3":
+                - 13
+                - 16
+            "4": 3.9.25
+            "5": 0.23.1
+            "6": 4.57.3
+            "8":
+                - 3
+            "10":
+                - 20
+            "12": 0.23.1
+            "13": windows-amd64
+batch_size:
+    value: 8
+epochs:
+    value: 1
+lr:
+    value: 0.0005
+model:
+    value: Helsinki-NLP/opus-mt-en-vi
+model_type:
+    value: opus
+seed:
+    value: 42

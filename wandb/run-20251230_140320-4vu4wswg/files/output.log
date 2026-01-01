@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 85, in run_opus_config
+    train_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\main.py", line 59, in <module>
+    bleu, train_loss, val_loss = run_opus_config(
+  File "C:\Users\Hello\mlops-neural-machine-translation\src\training\run_opus.py", line 85, in run_opus_config
+    train_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
